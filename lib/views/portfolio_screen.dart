@@ -3,6 +3,7 @@ import 'package:portfolio/res/assets/app_colors.dart';
 import 'package:portfolio/res/constant/layout_helper.dart';
 import 'package:portfolio/res/widgets/about_section.dart';
 import 'package:portfolio/res/widgets/capabilities_section.dart';
+import 'package:portfolio/res/widgets/company_projects_section.dart';
 import 'package:portfolio/res/widgets/contact_section.dart';
 import 'package:portfolio/res/widgets/experince_section.dart';
 import 'package:portfolio/res/widgets/footer.dart';
@@ -67,12 +68,14 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
                   Container(height: 1, color: AppColors.lineColor),
                   ProjectsSection(key: _workKey),
                   Container(height: 1, color: AppColors.lineColor),
-                  AboutSection(key: _aboutKey),
-                  Container(height: 1, color: AppColors.lineColor),
-                  // ── Naye sections (Contact se pehle) ──
                   const CapabilitiesSection(),
                   Container(height: 1, color: AppColors.lineColor),
-                  ExperienceSection(),
+                  const ExperienceSection(),
+                  Container(height: 1, color: AppColors.lineColor),
+                  // ── Naya: Experience ke neeche company projects ──
+                  const CompanyProjectsSection(),
+                  Container(height: 1, color: AppColors.lineColor),
+                  AboutSection(key: _aboutKey),
                   Container(height: 1, color: AppColors.lineColor),
                   ContactSection(key: _contactKey),
                   const Footer(),
